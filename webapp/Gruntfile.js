@@ -68,6 +68,7 @@ module.exports = function (grunt) {
                     middleware: function (connect) {
                         return [
                             mountFolder(connect, '.tmp'),
+                            mountFolder(connect, 'app/scripts'),
                             mountFolder(connect, 'test')
                         ];
                     }
@@ -299,7 +300,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('test', [
         'clean:server',
-        'concurrent:test',
+        //'concurrent:test',
         'connect:test',
         'mocha'
     ]);

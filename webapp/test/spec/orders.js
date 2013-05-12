@@ -15,7 +15,7 @@
 
 			it('should fetch orders from the API', function(done) {
 				jQuery.getJSON = function(url) {
-					expect(url).to.eq('/api/v1/orders');
+					expect(url).to.eq('/api/v1/orders.json');
 					done();
 				};
 
@@ -24,8 +24,8 @@
 			});
 
 			it('should return an array when the API returns successfully', function(done) {
-				jQuery.getJSON = function(url, args) {
-					args.success([]);
+				jQuery.getJSON = function(url, success) {
+					success([]);
 				};
 
 				var orders = new Orders();

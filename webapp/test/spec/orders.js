@@ -1,3 +1,5 @@
+/* global Orders, jQuery */
+
 'use strict';
 
 (function () {
@@ -12,7 +14,7 @@
 			});
 
 			it('should fetch orders from the API', function(done) {
-				jQuery.getJSON = function(url, args) {
+				jQuery.getJSON = function(url) {
 					expect(url).to.eq('/api/v1/orders');
 					done();
 				};
@@ -31,6 +33,17 @@
 					expect(data).to.be.an('array');
 					done();
 				});
+			});
+
+		});
+
+		describe('render', function () {
+
+			it('renders <li>-elements inside the given element', function() {
+				var ul = document.createElement('ul');
+				var orders = new Orders();
+				orders.render(ul, [{'name' : 'An order'}]);
+				expect(ul.getElementsByTagName('li').length).to.eq(1);
 			});
 
 		});

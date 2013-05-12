@@ -1,3 +1,7 @@
+/* global jQuery */
+
+'use strict';
+
 (function($) {
 	window.Orders = function() {
 
@@ -6,6 +10,13 @@
 				'success' : function(data) {
 					callback(data);
 				}
+			});
+		};
+
+		this.render = function(element, orders) {
+			var $element = $(element);
+			orders.forEach(function(order) {
+				$element.append($('<li>').html(order.name));
 			});
 		};
 

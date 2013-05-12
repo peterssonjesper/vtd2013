@@ -69,6 +69,7 @@ module.exports = function (grunt) {
                         return [
                             mountFolder(connect, '.tmp'),
                             mountFolder(connect, 'app/scripts'),
+                            mountFolder(connect, 'app/components'),
                             mountFolder(connect, 'test')
                         ];
                     }

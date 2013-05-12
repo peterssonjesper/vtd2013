@@ -1,8 +1,0 @@
-[core]
-	repositoryformatversion = 0
-	filemode = true
-	bare = true
-	ignorecase = true
-	precomposeunicode = false
-[remote "origin"]
-	url = /Users/christofferahrling/Projects/Valtech-Tech-Day-2013/vtd2013/package/../package

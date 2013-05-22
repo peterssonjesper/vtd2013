@@ -2,5 +2,6 @@
 .svn
 log/*.log
 tmp/**
+notes.txt
 node_modules/
 .sass-cache

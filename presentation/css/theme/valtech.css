@@ -9,19 +9,20 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #292929;
-  background-color: #292929; }
+  background: #000;
+  background-color: #000;
+  }
 
 .reveal {
   font-family: "Open Sans", sans-serif;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 200;
   letter-spacing: -0.02em;
   color: #eeeeee; }
 
 ::selection {
   color: white;
-  background: #00bdfa;
+  background: #49d3ff;
   text-shadow: none; }
 
 /*********************************************
@@ -48,7 +49,7 @@ body {
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: #00bdfa;
+  color: #49d3ff;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -78,7 +79,7 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #00bdfa;
+  border-color: #49d3ff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
@@ -86,19 +87,19 @@ body {
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #00bdfa; }
+  border-right-color: #49d3ff; }
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #00bdfa; }
+  border-left-color: #49d3ff; }
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #00bdfa; }
+  border-bottom-color: #49d3ff; }
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #00bdfa; }
+  border-top-color: #49d3ff; }
 
 .reveal .controls div.navigate-left.enabled:hover {
   border-right-color: #61d8ff; }
@@ -119,7 +120,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #00bdfa;
+  background: #49d3ff;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);

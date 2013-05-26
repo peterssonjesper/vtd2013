@@ -1,12 +1,12 @@
-/* global Orders, jQuery */
+/* global Ingredients, jQuery */
 
 'use strict';
 
 (function($) {
 
-	var orders = new Orders();
-	orders.fetch(function(list) {
-		orders.render($('ul'), list);
+	var ingredients = new Ingredients();
+	ingredients.fetch(function(list) {
+		ingredients.render($('ul'), list);
 	});
 
 })(jQuery);

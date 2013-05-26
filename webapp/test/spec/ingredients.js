@@ -1,26 +1,26 @@
-/* global Orders, jQuery */
+/* global Ingredients, jQuery */
 
 'use strict';
 
 (function () {
 
-	describe('Orders', function () {
+	describe('Ingredients', function () {
 
 		describe('fetch', function () {
 
 			it('should have a fetch method', function() {
-				var orders = new Orders();
-				expect(orders.fetch).to.be.a('function');
+				var ingredients = new Ingredients();
+				expect(ingredients.fetch).to.be.a('function');
 			});
 
-			it('should fetch orders from the API', function(done) {
+			it('should fetch ingredients from the API', function(done) {
 				jQuery.getJSON = function(url) {
-					expect(url).to.eq('/api/v1/orders.json');
+					expect(url).to.eq('/api/v1/ingredients.json');
 					done();
 				};
 
-				var orders = new Orders();
-				orders.fetch(function() {});
+				var ingredients = new Ingredients();
+				ingredients.fetch(function() {});
 			});
 
 			it('should return an array when the API returns successfully', function(done) {
@@ -28,8 +28,8 @@
 					success([]);
 				};
 
-				var orders = new Orders();
-				orders.fetch(function(data) {
+				var ingredients = new Ingredients();
+				ingredients.fetch(function(data) {
 					expect(data).to.be.an('array');
 					done();
 				});
@@ -41,8 +41,8 @@
 
 			it('renders <li>-elements inside the given element', function() {
 				var ul = document.createElement('ul');
-				var orders = new Orders();
-				orders.render(ul, [{'name' : 'An order'}]);
+				var ingredients = new Ingredients();
+				ingredients.render(ul, [{'name' : 'An ingredient'}]);
 				expect(ul.getElementsByTagName('li').length).to.eq(1);
 			});
 
